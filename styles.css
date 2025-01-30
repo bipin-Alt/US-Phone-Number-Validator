@@ -1,0 +1,150 @@
+:root {
+    --validator-background: #033B3D;
+    --text-color: #F2E7DC;
+    --box-shadow: 0 8px 18px #F24405;
+    --transition: all 0.3s ease;
+    --font-size: 1.2rem;
+    --border-radius: 0.5rem;
+    --button-background: #00B3AD;
+    --button-background-hover: #B33F00;
+    --letter-spacing: 0.1rem;
+    --input-color: #ffffff;
+    --input-background: rgba(179, 63, 0, 0.8);
+    --input-focus: rgba(179, 63, 0, 1);
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background: #f0f0f0;
+  }
+  
+  .validator-container {
+    width: 90%;
+    max-width: 600px;
+    background-color: var(--validator-background);
+    padding: 2rem;
+    margin: 2rem;
+    color: var(--text-color);
+    box-shadow: var(--box-shadow);
+    border-radius: var(--border-radius);
+    text-align: center;
+    transition: var(--transition);
+  }
+  
+  .validator-container h2 {
+    letter-spacing: var(--letter-spacing);
+    margin-bottom: 1.5rem;
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    color: var(--button-background);
+  }
+  
+  .input-container {
+    width: 100%;
+    margin: 1.5rem 0;
+  }
+  
+  #user-input {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1rem;
+    background: var(--input-background);
+    border: 2px solid transparent;
+    color: var(--input-color);
+    outline: none;
+    border-radius: var(--border-radius);
+    transition: var(--transition);
+  }
+  
+  #user-input:focus {
+    border-color: var(--button-background);
+    background: var(--input-focus);
+    box-shadow: 0 0 10px rgba(0, 179, 173, 0.3);
+  }
+  
+  .buttons-container {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin: 1.5rem 0;
+  }
+  
+  button {
+    padding: 0.8rem 1.5rem;
+    background: var(--button-background);
+    border: none;
+    color: var(--text-color);
+    font-size: 1rem;
+    border-radius: var(--border-radius);
+    letter-spacing: var(--letter-spacing);
+    cursor: pointer;
+    transition: var(--transition);
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+  
+  button:hover {
+    background: var(--button-background-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(242, 68, 5, 0.4);
+  }
+  
+  #results-div {
+    padding: 1rem;
+    color: var(--text-color);
+    font-size: 1.1rem;
+    margin-top: 1.5rem;
+    min-height: 60px;
+    border-radius: var(--border-radius);
+    background: rgba(0, 179, 173, 0.1);
+  }
+  
+  @media (max-width: 768px) {
+    .validator-container {
+      width: 95%;
+      padding: 1.5rem;
+      margin: 1rem;
+    }
+  
+    button {
+      width: 100%;
+      padding: 1rem;
+    }
+  
+    .buttons-container {
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+  
+    #user-input {
+      padding: 0.8rem;
+      font-size: 0.9rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    :root {
+      --font-size: 1rem;
+      --border-radius: 0.3rem;
+    }
+  
+    .validator-container {
+      padding: 1rem;
+    }
+  
+    button {
+      font-size: 0.9rem;
+    }
+  }
+  
+  
